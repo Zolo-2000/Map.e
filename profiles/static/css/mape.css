@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11/08/2015, 22:46:10
+    Author     : Juan
+*/
+@import url(http://fonts.googleapis.com/css?family=Comfortaa:400,700,300);
+
+.parallax-container {
+      height: 84px;
+    }
+.fullscreen{
+        padding: 0; 
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        fullscreen.hd{
+            padding-top: 2em;
+            padding-bottom: 2em;
+        }
+    }   
+
+
+ 

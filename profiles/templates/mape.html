@@ -1,0 +1,138 @@
+<!Doctype html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>Mape</title>
+        <meta name="description" content="Mapa de eventos.">
+        <meta name="keywords" content="maps, events, geo, html5, mobile, android, ios, tablet, smartphone, turism, ecuador, macas, morona">
+
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        <link  rel="stylesheet" href="css/materialize.min.css" media="screen,projection">
+        <link  rel="stylesheet" href="css/mape.css" >
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700,300' rel='stylesheet' type='text/css'>
+
+    </head>
+    <body>
+    	<ul id="dropdown1" class="dropdown-content">
+                <li><a href="#!"> <i class="material-icons">language</i>Global</a></li>
+                <li><a href="#!"> <i class="material-icons">explicit</i>Mi mapa</a></li>
+                <li><a href="#!"> <i class="material-icons">person_pin</i>Eventos</a></li>
+                <li class="divider"></li>
+                <li><a href="#!"><i class="material-icons">room</i>Comercial</a></li>
+            </ul>
+    	<nav class="s12">
+    		<div class="nav-wrapper">
+                 <a href="#" class="brand-logo center">mape</a>
+                 <ul id="nav-mobile" class="left hide-on-med-and-down">
+                 <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Vista<i class="material-icons left">view_module</i></a></li>
+                 <li><a href="#" ><i class="material-icons">user</i></
+                 </ul>
+            </div>
+        </nav>
+  </nav>
+    	<div class="hiden">
+            <div>
+                Navegador, Logo (selector de mapa, usuario)
+            </div>
+            <div>
+                localizadro de posicion, buscador
+            </div>
+            <div>
+                mapa
+            </div>
+            <div>
+                articulo seleccionado desplegable
+            </div>
+        </div>
+
+        <!-- Ventana de usuario -->
+        <div >
+            <div>
+                Navegador, Logo (home, configuracion)
+            </div>
+            <div>
+                imagen de perfil circular
+            </div>
+            <div>
+                info
+                <div>
+                    formulario de info    
+                </div>
+                <div>
+                    botones
+                </div>
+            </div>
+            <div>
+                contactos
+                <div>
+                    lista de contactos
+                </div>
+                <div>
+                    importar contactos desde 
+                </div>
+            </div>
+            <div>
+                cuenta comercial
+                <div>
+                    formulario de ingreso
+                </div>
+                <div>
+                    botones
+                </div>
+            </div>
+        </div>
+
+        <!-- Ventana de configuracion -->
+        <div >
+            <div>
+                Navegador (back)
+            </div>
+            <div>
+                lista de opciones
+                <div>
+
+                </div>
+            </div>
+            <div>
+                botones
+            </div>
+        </div>
+        <div >
+            <div>
+                Navegador (back)
+            </div>
+            <div>
+                lista de opciones
+                <div>
+
+                </div>
+            </div>
+            <div>
+                botones
+            </div>
+        </div>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.parallax').parallax();
+                $('input#input_text, textarea#textarea1').characterCounter();
+                $('.slider').slider({full_width: true});
+                $('.slider').slider('pause');
+                $('.button-collapse').sideNav();
+                $('.parallax').parallax();
+                $('input#input_text, textarea#textarea1').characterCounter();
+                $('.datepicker').pickadate({
+                    selectMonths: true, // Creates a dropdown to control month
+                    selectYears: 15 // Creates a dropdown of 15 years to control year
+                });
+            });
+        </script>
+
+    </body>
+
+</html>
