@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'mapedb',
         'USER': 'postgres',
-        'PASSWORD': '',
+        'PASSWORD': 'eduubuye@081011',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
@@ -104,4 +104,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 STATIC_URL = '/static/'

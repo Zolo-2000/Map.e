@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,10 +15,10 @@
         <meta http-equiv="cleartype" content="on">
 
 
-        <link rel="stylesheet" href="components/lungo/lungo.css">
-        <link rel="stylesheet" href="components/lungo/lungo.icon.css">
-        <link rel="stylesheet" href="components/lungo/lungo.icon.brand.css">
-        <link rel="stylesheet" href="components/lungo/lungo.theme.default.css">
+    <link rel="stylesheet" href="{% static 'components/lungo/lungo.css' %}">
+    <link rel="stylesheet" href="{% static 'components/lungo/lungo.icon.css' %}">
+    <link rel="stylesheet" href="{% static 'components/lungo/lungo.icon.brand.css' %}">
+    <link rel="stylesheet" href="{% static 'components/lungo/lungo.theme.default.css' %}">
     </head>
 
     <body class="app">
@@ -123,10 +124,12 @@
                         
                     </form>
             </article>
-        </section>
+        </section>        
 
-        <script src="components/quojs/quo.js"></script>
-        <script src="components/lungo/lungo.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
+    <!-- Lungo - Dependencies -->
+    <script src="{% static 'components/quojs/quo.js' %}"></script>
+    <script src="{% static 'components/lungo/lungo.js' %}"></script>
+    <!-- Lungo - Sandbox App -->
+    <script src="{% static 'js/main.js' %}"></script>    
     </body>
 </html>
