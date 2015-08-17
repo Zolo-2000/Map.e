@@ -4,8 +4,8 @@ from .models import Profile
 
 # Create your views here.
 
-def login(request):
-	template = "login.html"	
+def index(request):
+	template = "index.html"
 	return render_to_response(template, {})
 
 # Create your views here.
