@@ -1,6 +1,6 @@
 <!Doctype html>
 <html>
-<head>
+    <head>
         <meta charset="UTF-8">
         <title>Mape</title>
         <meta name="description" content="Mapa de eventos.">
@@ -12,125 +12,136 @@
         <link  rel="stylesheet" href="css/mape.css" >
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700,300' rel='stylesheet' type='text/css'>
+        <script src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+        <link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
 
     </head>
     <body>
-    	<ul id="dropdown1" class="dropdown-content">
-                <li><a href="#!"> <i class="material-icons">language</i>Global</a></li>
-                <li><a href="#!"> <i class="material-icons">explicit</i>Mi mapa</a></li>
-                <li><a href="#!"> <i class="material-icons">person_pin</i>Eventos</a></li>
-                <li class="divider"></li>
-                <li><a href="#!"><i class="material-icons">room</i>Comercial</a></li>
-            </ul>
-    	<nav class="s12">
-    		<div class="nav-wrapper">
-                 <a href="#" class="brand-logo center">mape</a>
-                 <ul id="nav-mobile" class="left hide-on-med-and-down">
-                 <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Vista<i class="material-icons left">view_module</i></a></li>
-                 <li><a href="#" ><i class="material-icons">user</i></
-                 </ul>
+        <style>
+            #map { position:relative; top:0; bottom:0; width:100%; height: 500px; z-index: 0; }
+            #frente {position:relative; z-index: 1;}
+        </style>
+        <nav class="s12">
+            <div class="nav-wrapper cyan">
+                <div class="brand-logo center">mape</div>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Vista<i class="material-icons left">view_module</i></a></li>
+                </ul>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#" data-activates="Usuario"><i class="material-icons">perm_identity</i></a></li>
+                </ul>
+                <ul class="side-nav" id="usuario">
+                    <li><a href="sass.html">Sass</a></li>
+                </ul>
+                <ul id="dropdown1" class="dropdown-content">
+                    <li><a href="#Mapa" class="center"> <i class="material-icons">language</i>Global</a></li>
+                    <li><a href="#pantalla-eventos" class="center"> <i class="material-icons">explicit</i>Eventos <span class="new badge">4</span></a></li>
+                    <li><a href="#!" class="center"> <i class="material-icons">person_pin</i>Mi mapa</a></li>
+                    <li class="divider"></li>
+                    <li class="hiden"><a href="#!" class="center disabled"><i class="material-icons">room</i>Comercial</a></li>
+                </ul>
             </div>
         </nav>
-  </nav>
-    	<div class="hiden">
-            <div>
-                Navegador, Logo (selector de mapa, usuario)
+        <!-- Tabs de secciones Eventos, mi mapa, Global, Comercial-->
+        <div class="row" >
+            <div class="col s12">
+                <ul class="tabs cyan-text">
+                    <li class="tab col s3"><a class="active" href="#Mapa">Mapa</a></li>
+                    <li class="tab col s3"><a href="#Eventos">Eventos</a></li>
+                    <li class="tab col s3"><a href="#Comercial">Comercial</a></li>
+                </ul>
             </div>
-            <div>
-                localizadro de posicion, buscador
+            <div id="Mapa" class="col s12">
+                <div id="map" >
+                    <!-- Barra de busqueda/location-->
+                    <div id="frente" class="row float">
+                        <div class="col s2"></div>
+                        <div class="input-field col s8">
+                            <i class="material-icons prefix">search</i>
+                            <input id="icon_prefix" type="search" class="validate">
+                            <label for="icon_prefix">Lugar, evento, persona...</label>
+                        </div>
+                        <div class="col s2 right">
+                            <a href="#">
+                                <i class="material-icons prefix medium">my_location</i>
+                            </a>
+                        </div>
+                        <div class="fixed-action-btn" >
+                            <a class="btn-floating btn-large cyan darken-2">
+                                <i class="large material-icons">add</i>
+                            </a>
+                            <ul>
+                                <li><a class="btn-floating cyan darken-1"><i class="material-icons">room</i></a></li>
+                                <li><a class="btn-floating red darken-1"><i class="material-icons">store</i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- visualizador de eventos, localidades -->
+                <div>
+                    <ul class="collapsible popout float" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">room</i>
+                                titulo de Evento
+
+                            </div>
+                            <div class="collapsible-body">
+                                <ul class="collection">
+                                    <li class="collection-item">De: Juan Solorzano </li>
+                                    <li class="collection-item">Hora: 15h30</li>                            
+                                    <li class="collection-item">Descripcion: asdasdf asdfasdf   asdf asdasd asdfa asdf      ASDFASDFASDFASDF      ASDFASDFASDFA       asdf adf aSDFASDF ASDF</li>
+                                    <li class="collection-item"><img class="materialboxed" data-caption="Descripcion de la imagen" width="100" src="img/fiesta.jpg"> </li>
+                                    <li class="collection-item">Cover: free</li>
+                                    <li class="collection-item">Asistir <a class="btn-floating blue"> <i class="material-icons medium">add</i></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                mapa
+            
+            <!-- Todos los eventos enlistados-->
+            <div id="Eventos" class="col s12">
+                <ul class="collapsible popout" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header"><img src="img/fiesta.jpg" style="width: 30px; height: 30px; border-radius: 50%;"></div>
+                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                </ul>
             </div>
-            <div>
-                articulo seleccionado desplegable
-            </div>
+            <div id="Comercial" class="col s12">Test 3</div>
         </div>
-
-        <!-- Ventana de usuario -->
-        <div >
-            <div>
-                Navegador, Logo (home, configuracion)
-            </div>
-            <div>
-                imagen de perfil circular
-            </div>
-            <div>
-                info
-                <div>
-                    formulario de info    
-                </div>
-                <div>
-                    botones
-                </div>
-            </div>
-            <div>
-                contactos
-                <div>
-                    lista de contactos
-                </div>
-                <div>
-                    importar contactos desde 
-                </div>
-            </div>
-            <div>
-                cuenta comercial
-                <div>
-                    formulario de ingreso
-                </div>
-                <div>
-                    botones
-                </div>
-            </div>
+        
+        <!--    Comercial     -->
+        <div id="Comercial" class="col s12">
+            lorem
         </div>
-
-        <!-- Ventana de configuracion -->
-        <div >
-            <div>
-                Navegador (back)
-            </div>
-            <div>
-                lista de opciones
-                <div>
-
-                </div>
-            </div>
-            <div>
-                botones
-            </div>
-        </div>
-        <div >
-            <div>
-                Navegador (back)
-            </div>
-            <div>
-                lista de opciones
-                <div>
-
-                </div>
-            </div>
-            <div>
-                botones
-            </div>
-        </div>
-
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="js/materialize.min.js"></script>
         <script>
             $(document).ready(function() {
-                $('.parallax').parallax();
-                $('input#input_text, textarea#textarea1').characterCounter();
-                $('.slider').slider({full_width: true});
-                $('.slider').slider('pause');
-                $('.button-collapse').sideNav();
-                $('.parallax').parallax();
-                $('input#input_text, textarea#textarea1').characterCounter();
-                $('.datepicker').pickadate({
-                    selectMonths: true, // Creates a dropdown to control month
-                    selectYears: 15 // Creates a dropdown of 15 years to control year
+                $(".button-collapse").sideNav();
+                $('.collapsible').collapsible({
+                    accordion: false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
                 });
+                $('.fixed-action-btn').closeFAB();
             });
+        </script>
+        <script>
+            L.mapbox.accessToken = 'pk.eyJ1Ijoiem9sbyIsImEiOiJ0VlphRlZFIn0.gLAS81dTkxi1W5FqVMKwXg';
+            var map = L.mapbox.map('map', 'mapbox.streets')
+                    .setView([-2.307, -78.124], 14);
+            L.mapbox.map('map', 'zolo.lkgcf241');
         </script>
 
     </body>

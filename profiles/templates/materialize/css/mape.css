@@ -21,7 +21,9 @@ and open the template in the editor.
             padding-top: 2em;
             padding-bottom: 2em;
         }
-    }   
+    } 
+    .collapsible-header img{
+    margin-top: 0.45em; }
 
 
  
