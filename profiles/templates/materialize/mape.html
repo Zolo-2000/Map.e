@@ -18,17 +18,17 @@
 
     </head>
     <body>
-        <!-- Header -->
-        <div class="row" >
-            <nav>
+        <div class="no-padding">
+            <!-- Header -->
+            <nav class="row no-margin">
                 <div class="nav-wrapper cyan">
                     <a class="brand-logo center" href="#"><h4>mape</h4></a>
 
-                    <ul id="nav-left">
-                        <li><a class="dropdown-button" href="#" data-activates="menu-izq"><i class="material-icons left">view_module</i>Vista</a></li>
+                    <ul id="nav-left" class="col s4" >
+                        <li><a class="dropdown-button" href="#" data-activates="menu-izq"><i class="material-icons left">view_module</i><b class="hide-on-med-and-down">Vista</b></a></li>
                     </ul>
-                    <ul id="nav-right" class="right">
-                        <li><a href="profile.html"><i class="material-icons right">perm_identity</i> Usuario</a></li>
+                    <ul id="nav-right" class="col s4 right">
+                        <li class="right"><a href="profile.html"><i class="material-icons right">perm_identity</i><b class="hide-on-med-and-down">Usuario</b></a></li>
                     </ul>
                     <!-- lista de menu izquierdo -->
                     <ul id="menu-izq" class="dropdown-content">
@@ -40,7 +40,11 @@
                     </ul>
                 </div>
             </nav>
-
+            <!-- tab de progreso -->
+              <div class="progress no-margin">
+                  <div class="indeterminate"></div>
+              </div>
+            <div class="row no-padding" >
             <!-- Tabs para seleccionar la seccion Mapa, eventos, comercial-->
             <div class="col s12 no-padding ">
                 <ul class="tabs cyan-text">
@@ -68,10 +72,10 @@
                             <label for="icon_prefix">buscar</label>
                         </div>
                         <!-- Boton añadir -->
-                        <div class="no-padding up-3">
+                        <div class="no-padding">
                             <div class="fixed-action-btn" >
                                 <a class="btn-floating btn-large cyan darken-2">
-                                    <i class="material-icons large">add</i>
+                                    <i class="material-icons medium">add</i>
                                 </a>
                                 <ul>
                                     <li><a class="btn-floating cyan darken-1 tooltipped" data-position="left" data-delay="2" data-tooltip="sitio"><i class="material-icons">room</i></a></li>
@@ -81,19 +85,24 @@
                         </div>
                         <!-- visualizador de eventos, localidades -->
                         <div class="col s12 no-padding">
-                            <ul class="collapsible popout float" data-collapsible="accordion">
+                            <ul class="collapsible popout" data-collapsible="accordion">
                                 <li>
-                                    <div class="collapsible-header low-border"><i class="material-icons">room</i>
-                                        titulo de Evento
+                                    <div class="collapsible-header filme"><i class="material-icons right">room</i>
+                                        <b>titulo de Evento</b>
                                     </div>
                                     <div class="collapsible-body frente">
-                                        <ul class="collection">
-                                            <li class="collection-item">De: Juan Solorzano </li>
-                                            <li class="collection-item">Hora: 15h30</li>                            
-                                            <li class="collection-item truncate">Descripcion: asdasdf asdfasdf   asdf asdasd asdfa asdf      ASDFASDFASDFASDF      ASDFASDFASDFA       asdf adf aSDFASDF ASDF</li>
-                                            <li class="collection-item"><img class="materialboxed" width="80" src="img/fiesta.jpg"> </li>
-                                            <li class="collection-item">Cover: free</li>
-                                            <li class="collection-item">Asistir <a class="btn-floating blue"> <i class="material-icons medium">add</i></a></li>
+                                        <ul class="collection filme-med">
+                                            <li class="collection-item row">
+                                                <div class="col s6">
+                                                De: <b>Juan Solorzano</b></div> 
+                                                <div class="col s6">
+                                                De: <b>Juan Solorzano</b></div>
+                                            </li>
+                                            <li class="collection-item">Hora: <b>15h30</b></li>                            
+                                            <li class="collection-item truncate">Descripci&oacute;n: asdasdf asdfasdf   asdf asdasd asdfa asdf      ASDFASDFASDFASDF      ASDFASDFASDFA       asdf adf aSDFASDF ASDF</li>
+                                            <li class="collection-item"><img class="materialboxed" width="400" src="img/fiesta.jpg"></li>
+                                            <li class="collection-item">Cover: <b>free</b></li>
+                                            <li class="collection-item center"><a class="btn-floating blue"> <i class="material-icons medium">done</i></a><div class="separator"></div><a class="btn-floating blue"><i class="material-icons medium">add</i></a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -101,21 +110,23 @@
                         </div>
                     </div>
                 </div>
-                
+                </div>
             </div>
             
             <!-- Todos los eventos enlistados-->
             <div id="Eventos" class="row">
+                <!-- Ciudad en la que se encuentra -->
                 <div class="grey-text col s4">
-                    <p>En..
-                    <h5>Macas</h5></p>
+                    <p><h5>Macas</h5></p>
                 </div>
+                <!-- Boton de Busqueda-->
                 <div class="input-field col s7 ">
                     <input id="search2" type
                     ="search" class="validate">
                     <label for="search2"><i class="material-icons prefix">search</i><label>
                 </div>
-                
+                <!-- Elementos de la lista de eventos 
+                Tambien muestra los resultados de una busqueda -->
                 <ul class="col s12 collapsible popout" data-collapsible="accordion">
                     <li>
                         <div class="collapsible-header no-padding"><img src="img/fiesta.jpg" class="materialboxed left no-margin no-padding" width="200">
@@ -133,7 +144,7 @@
                                      Cover: 4,99USD
                                   </p>
                                   <!-- boton "seguir" -->
-                                  <a href="#!" class="secondary-content btn-floating tooltiped cyan accent-1" data-position="button" data-tooltip="Seguir" data-delay"50"><i class="material-icons">add</i></a> 
+                                  <a href="#" class="secondary-content btn-floating tooltiped cyan accent-1" data-position="left" data-tooltip="Seguir" data-delay"50"><i class="material-icons">add</i></a> 
                                 </li>
                               </ul>
                               <ul id="Ofert" class="container row">
@@ -165,7 +176,11 @@
                     </li>
                 </ul>
             </div>
-            <div id="Comercial" class="col s12">Test 3</div>
+
+            <!-- Comercial pendiente-->
+            <div id="Comercial" class="col s12">
+
+            </div>
         </div>
         
         <!--    Comercial     -->
@@ -190,7 +205,6 @@
                       belowOrigin: false // Displays dropdown below the button
                     }
                   );
-                $('.materialboxed').materialbox();
 
             });
         </script>
@@ -200,6 +214,7 @@
                     .setView([-2.307, -78.124], 14);
             L.mapbox.map('map', 'zolo.lkgcf241');
             $('.tooltipped').tooltip({delay: 50});
+
         </script>
 
     </body>
