@@ -10,222 +10,70 @@
         <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}" media="screen,projection">
         <link rel="stylesheet" href="{% static 'css/mape.css' %}" >
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Comfortaa:400,700,300">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Comfortaa:400,700,300">        
     </head>
     <body>
-        <div class="slider fullscreen">
-            <ul class="slides fullscreen">
-                <li>
-                    <div class="parallax-container">
-                        <div class="parallax"><img src="img/fiesta.jpg"></div>
-                    </div>
-                    <div class="center cyan accent-3" >
-                        <i class="material-icons large" style="margin-top: 20px">language</i>
-                        <h1> MAPe </h1>
-                        <p class="light center">Bienvenido a Mape, el primer mapa de eventos. Podras encontrar y publicar lugares geniales para visitar, comparte con tus amigos los mejores eventos y no dejes de 
-                            <strong>seguir</strong> lugares divertidos!	</p>     
 
-                        <a href="#" class="center cyan darken-1 waves-efect waves-light btn s3" style="margin-bottom: 2em">
-                            <i class="material-icons">input</i> Iniciar 
-                        </a>
-                        <a class="center cyan darken-1  waves-efect waves-light btn s3" style="margin-bottom: 2em">
-                            <i class="material-icons">perm_identity</i> <strong>Registrarse</strong>
-                        </a>
-                    </div>
-                    <div class="parallax-container fullscreen">
-                        <div class="parallax"><img src="img/map.jpg"></div>
-                    </div>
-                </li>
-                <li class="fullscreen">
-                    <img class="responsive-img" src="img/cielo.jpg">
-                    <div class="caption left-align fullscreen no-padding">
-                        <!-- Ventana de registro -->
-                        <div class="section">
-                            <form action="#mape" class="left-align" style="padding-top: 0;">
-                                <div class="black-text center large darken-3">
-                                    Ingrese sus datos 
-                                </div>
-                                <div class="input-field col s6">
-                                    <i class="material-icons prefix black-text">account_circle</i>
-                                    <input id="name-user" class="validate input-text black-text darken-3" type="text"/>
-                                    <label for="input_text" class="black-text darken-3">Nombres</label>
-                                </div>
-                                <div class="input-field col s6">
-                                    <i class="material-icons prefix black-text">account_circle</i>
-                                    <input id="lastname-user" class="validate black-text darken-3" type="text" />
-                                    <label for="input_text" class="black-text darken-3">Apellidos</label>
-                                </div>
-                                
-                                <div class="input-field col s6">
-                                    <input id="birthday-user" class="datepicker black-text darken-3" type="date" />
-                                    <label for="input_text" class="black-text darken-3">Cumpleaños</label>
-                                </div>
-                                <div class="input-field col s6">
-                                    <i class="material-icons prefix black-text">account_circle</i>
-                                    <input id="username-user" class="validate black-text darken-3" type="text"/>
-                                    <label for="input_text" class="black-text darken-3">Nombre de usuario</label>
-                                </div>
-                                <div class="input-field col s6">
-                                    <i class="material-icons prefix black-text">vpn_key</i>
-                                    <input id="pass-user" class="validate black-text darken-3" type="password" />
-                                    <label for="input_text" class="black-text darken-3">Contraseña</label>
-                                </div>
-                                <div class="input-field col s6">
-                                    <i class="material-icons prefix black-text">vpn_key</i>
-                                    <input id="passconfirmation-user" class="validate black-text darken-3" type="password" />
-                                    <label for="input_text" class="black-text darken-3">Repita la contraseña</label>
-                                </div>
-                                <div class="input-field col s6">
-                                    <i class="material-icons prefix black-text">email</i>
-                                    <input id="email-user" class="validate black-text darken-3" type="email" />
-                                    <label for="email" data-error="wrong" data-success="right" class="black-text darken-3">E-mail</label>
-                                </div>
-                                <button class="btn cyan darken-1 waves-effect waves-light" type="submit" name="action">Enviar
-                                    <i class="material-icons">send</i>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </li>
-                <!-------------------------------------- Ventana de login ----------------------------------->
-                <li id="login">
-                    <img class="responsive-img" src="img/cielo.jpg">
-                    <div class="caption fullscreen center-align" >
-                        <i class="material-icons large black-text">assignment_ind</i>
-                        <form action="#login">
-                            <div class="input-field col s6">
-                                <i class="material-icons prefix black-text">account_circle</i>
-                                <input id="passconfirmation-user" class="validate black-text darken-3" type="password" />
-                                <label for="input_text" class="black-text darken-3">Usuario</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <i class="material-icons prefix black-text">vpn_key</i>
-                                <input id="passconfirmation-user" class="validate black-text darken-3" type="password" />
-                                <label for="input_text" class="black-text darken-3">Contraseña</label>
-                            </div>
-                            <a href="#" class="btn cyan darken-1 waves-efect waves-light"><i class="material-icons">input</i> Inciar</a>
-                        </form>
-                        <div>
-                            <a href="#" >Olvide mi contraseña</a>
-                        </div>
-                        <footer class="hiden">
-                            footer
-                        </footer>
-                    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="img/fiesta.jpg"></div>
+    </div>
 
+    <div class="center cyan" >
+        <i class="material-icons large white-text">language</i>
+        <h1 class="white-text"> Mape </h1>
+        <p class="container white-text center marginado">Bienvenido a Mape, el primer mapa de eventos. Podras encontrar y <strong class="amber-text">&#10003; asistir </strong> a eventos divertidos o invitar a tus amigos a tus propios eventos, accede a los lugares mas interesantes para visitar y comparte con tus amigos los mejores eventos, no dejes de <strong class="amber-text">+ seguir </strong> tus lugares favoritos! </p>     
+        
+        <div class="fullscreen center-align">
+            <form class="container center" action="#">
+                <div class="input-field col ">
+                    <i class="material-icons prefix white-text waves-effect waves-light">account_circle</i>
+                    <input id="user" class="validate white-text darken-3" type="text" />
+                    <label for="user" class="white-text darken-3">Usuario</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix white-text waves-effect waves-light">vpn_key</i>
+                    <input id="user-pass" class="validate white-text darken-3" type="password" />
+                    <label for="user-pass" class="white-text darken-3">Contraseña</label>
+                </div>
+                <a href="mape.html" class="btn cyan darken-1 waves-effect waves-light marginado"><i class="material-icons">input</i> Inciar</a>
+            </form>
+            <a href="#modal-forgotpass" class="modal-trigger cyan-text text-darken-4"> Olvidé mi contraseña</a>
+            <div class="center-align section">
 
-
-                </li>
-            </ul>
-        </div>
-        <!-- Ventana de main -->
-        <div class="hiden">
-            <div>
-                <ul id="dropdown2" class="dropdown-content">
-                    <li><a href="#!">one<span class="badge">1</span></a></li>
-                    <li><a href="#!">two<span class="new badge">1</span></a></li>
-                    <li><a href="#!">three</a></li>
-                </ul>
-                <a class="btn dropdown-button" href="#!" data-activates="dropdown2">Dropdown<i class="mdi-navigation-arrow-drop-down right"></i></a>
-
-                Navegador, Logo (selector de mapa, usuario)
-            </div>
-            <div>
-                localizadro de posicion, buscador
-            </div>
-            <div>
-                mapa
-            </div>
-            <div>
-                articulo seleccionado desplegable
+                <!-- Trigger del modal de registro -->
+                <a class="col btn cyan darken-1 " href="registro.html"><i class="material-icons">perm_identity</i> <strong>Registrarse</strong></a> 
+                
             </div>
         </div>
-
-        <!-- Ventana de usuario -->
-        <div >
-            <div>
-                Navegador, Logo (home, configuracion)
+    </div>
+    <!-- Modal Recuperacion de contraseña -->
+    <div id="modal-forgotpass" class="modal">
+        <div class="modal-content center">
+            <h4>Que tonto XD</h4>
+            <div class="input-field col s6">
+                    <i class="material-icons prefix ">email</i>
+                    <input id="email-user" class="black-text darken-3" type="email"/>
+                    <label for="email-user" data-error="wrong" data-success="right" class="black-text darken-3">E-mail</label>
             </div>
-            <div>
-                imagen de perfil circular
-            </div>
-            <div>
-                info
-                <div>
-                    formulario de info    
-                </div>
-                <div>
-                    botones
-                </div>
-            </div>
-            <div>
-                contactos
-                <div>
-                    lista de contactos
-                </div>
-                <div>
-                    importar contactos desde 
-                </div>
-            </div>
-            <div>
-                cuenta comercial
-                <div>
-                    formulario de ingreso
-                </div>
-                <div>
-                    botones
-                </div>
-            </div>
+            <p class=""> Revisa tu correo para acceder a tu cuenta.</p>
         </div>
-
-        <!-- Ventana de configuracion -->
-        <div >
-            <div>
-                Navegador (back)
-            </div>
-            <div>
-                lista de opciones
-                <div>
-
-                </div>
-            </div>
-            <div>
-                botones
-            </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Enviar</a>
         </div>
-        <div >
-            <div>
-                Navegador (back)
-            </div>
-            <div>
-                lista de opciones
-                <div>
-
-                </div>
-            </div>
-            <div>
-                botones
-            </div>
-        </div>
-
-
-
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="{% static 'js/materialize.min.js' %}"></script>
-        <script>
-            $(document).ready(function() {
-                $('.parallax').parallax();
-                $('input#input_text, textarea#textarea1').characterCounter();
-                $('.slider').slider({full_width: true});
-                $('.slider').slider('pause');
-                $('.button-collapse').sideNav();
-                $('.parallax').parallax();
-                $('input#input_text, textarea#textarea1').characterCounter();
-                $('.datepicker').pickadate({
-                    selectMonths: true, // Creates a dropdown to control month
-                    selectYears: 15 // Creates a dropdown of 15 years to control year
-                });
-            });
-        </script>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="img/cielo.jpg"></div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.parallax').parallax();
+            $('input#input_text, textarea#textarea1').characterCounter();
+            $('.modal-trigger').leanModal();
+            $('select').material_select('destroy');
+        });
+    </script>
     </body>
 </html>

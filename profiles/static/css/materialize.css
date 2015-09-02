@@ -2090,7 +2090,7 @@ img.responsive-img, video.responsive-video {
 .parallax-container {
   position: relative;
   overflow: hidden;
-  height: 100px; }
+  height: 500px; }
 
 .parallax {
   position: absolute;
@@ -5387,7 +5387,7 @@ a {
 
 html {
   line-height: 1.5;
-  font-family: 'Comfortaa', cursive;;
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.87); }
   @media only screen and (min-width: 0) {
