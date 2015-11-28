@@ -1,23 +1,16 @@
+{% load staticfiles %}
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <meta charset="UTF-8">
         <title>Mape</title>
         <meta name="description" content="Mapa de eventos.">
-        <meta name="keywords" content="maps, events, geo, html5, mobile, android, ios, tablet, smartphone, turism, ecuador, macas, morona">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">        
 
-        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
-        <link  rel="stylesheet" href="css/materialize.min.css" media="screen,projection">
-        <link  rel="stylesheet" href="css/mape.css">
-
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}" media="screen,projection">
+        <link rel="stylesheet" href="{% static 'css/mape.css' %}" >
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Comfortaa:400,700,300">        
     </head>
     <body>
 
